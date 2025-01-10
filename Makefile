@@ -1,4 +1,4 @@
-﻿.PHONY : build clean format install-python test-cpp test-onnx
+.PHONY : build clean format install-python test-cpp test-onnx
 
 TYPE ?= Release
 TEST ?= ON
@@ -15,4 +15,4 @@ clean:
 
 test-cpp:
 	@echo
-	cd build/$(TYPE) && make test
+	cd build/$(TYPE) && ctest --output-on-failure
